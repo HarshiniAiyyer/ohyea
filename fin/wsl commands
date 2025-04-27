@@ -1,0 +1,29 @@
+cd ~
+
+sudo apt update && sudo apt upgrade -y
+sudo apt update
+sudo apt install python3-venv -y
+
+python3 -m venv venv
+
+source venv/bin/activate
+(venv) harshini@LAPTOP-xxxx:~$
+
+pip install mlflow apache-airflow pandas scikit-learn
+
+
+## to Check where airflow has been installed
+cd /
+cd mnt
+
+#now
+which airflow
+cd ~/airflow
+
+#changing path??
+cd~
+
+#initializing bash script
+nano ~/.bashrc
+
+#creating a directory to store airflow so that I dont have to manually 

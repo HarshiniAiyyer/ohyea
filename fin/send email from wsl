@@ -1,0 +1,68 @@
+How to send emails from your WSL
+
+STEP 1 
+Keep all the paths to files ready or copied somewhere.
+
+
+STEP 2 
+Make sure 2 factor authentication is ON. Else it wont work.
+
+
+STEP 3
+Install packages like msmtp, mutt and zip if you havent already.
+
+``` sudo apt update
+sudo apt install msmtp msmtp-mta mutt
+```
+
+
+STEP 4
+Go to this URL called App Password in your Google Account.
+
+https://myaccount.google.com/apppasswords?rapt=AEjHL4N4jlo0iQpPIrNnT2S30YHIR8dfkDk5bTkBmUzmsxX7veGL5vok8Y4XobsaZgj4_Q1t4iL22a2tsqYszaIH-lCxpX2fVu8w5-uiQX5XiNh2k5JZKU8
+
+Generate a 16 letter password and keep it ready.
+
+
+STEP 5  Nano
+
+```nano ~/.msmtprc
+```
+
+
+STEP 6 
+Enter the following text in there
+
+# Gmail SMTP configuration
+account gmail
+host smtp.gmail.com
+port 587
+from your-email@gmail.com
+auth on
+user your-email@gmail.com
+password your-app-password  -> here enter the 16 digit code
+tls on
+logfile ~/.msmtp.log
+
+account default : gmail
+
+
+STEP 7 
+Zip your folder to send over
+
+```zip -r myfolder.zip /path/to/your/folder
+```
+
+
+STEP 8  
+Sending Email via the mutt library (msmtp didnt work for me)
+
+echo "Here is the folder attachment." | mutt -s "Folder Attachment" -a path-of-the-zipped-file.zip -- youremail@gmail.com
+
+
+STEP 9
+Check spam or inbox for your email!!
+
+
+Thank you ChatGPT!! :)
+

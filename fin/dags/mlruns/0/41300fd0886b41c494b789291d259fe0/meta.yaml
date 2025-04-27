@@ -1,0 +1,16 @@
+artifact_uri: file:///C:/Users/harsh/OneDrive/Desktop/fin/dags/mlruns/0/41300fd0886b41c494b789291d259fe0/artifacts
+deleted_time: 1745766333864
+end_time: 1745696316298
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: deleted
+run_id: 41300fd0886b41c494b789291d259fe0
+run_name: bouncy-koi-119
+run_uuid: 41300fd0886b41c494b789291d259fe0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1745696307294
+status: 3
+tags: []
+user_id: harsh
